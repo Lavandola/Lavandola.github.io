@@ -5,6 +5,10 @@
   
 
 
+<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas> 
+<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+<script type="text/javascript" src="/js/fireworks.js"></script>
+
 <html class="theme-next muse use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
@@ -599,16 +603,68 @@
                   <li class="links-of-blogroll-item">
                     <a href="https://sun-xyu.github.io/2018/10/16/hexo_next_blog/" title="Hexo+NexT 打造一个炫酷博客" target="_blank">Hexo+NexT 打造一个炫酷博客</a>
                   </li>
-                
+              
                   <li class="links-of-blogroll-item">
                     <a href="https://sun-xyu.github.io/2018/10/14/hexo_create_blog/" title="Hexo 搭建个人博客" target="_blank">Hexo 搭建个人博客</a>
                   </li>
-                
-              </ul>
-            </div>
-          
+              
+            </ul>
++        <div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()"， 1000);
+BirthDay=new Date("05/27/2019 15:13:14");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
 
-          
+          </div>
+         
+
+-        <div id="days"></div>
+<script>
+function show_date_time(){
+window.setTimeout("show_date_time()"， 1000);
+BirthDay=new Date("05/27/2019 15:13:14");
+today=new Date();
+timeold=(today.getTime()-BirthDay.getTime());
+sectimeold=timeold/1000
+secondsold=Math.floor(sectimeold);
+msPerDay=24*60*60*1000
+e_daysold=timeold/msPerDay
+daysold=Math.floor(e_daysold);
+e_hrsold=(e_daysold-daysold)*24;
+hrsold=setzero(Math.floor(e_hrsold));
+e_minsold=(e_hrsold-hrsold)*60;
+minsold=setzero(Math.floor((e_hrsold-hrsold)*60));
+seconds=setzero(Math.floor((e_minsold-minsold)*60));
+document.getElementById('days').innerHTML="已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";
+}
+function setzero(i){
+if (i<10)
+{i="0" + i};
+return i;
+}
+show_date_time();
+</script>
 
         </div>
       </section>
