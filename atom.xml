@@ -77,24 +77,6 @@
   </entry>
   
   <entry>
-    <title>数据库实验四</title>
-    <link href="https://lavandola.github.io/2019/06/18/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%9E%E9%AA%8C%E5%9B%9B/"/>
-    <id>https://lavandola.github.io/2019/06/18/数据库实验四/</id>
-    <published>2019-06-18T14:00:37.000Z</published>
-    <updated>2019-06-18T14:11:43.228Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="/images/insert_image2.jpg" alt></p><a id="more"></a><p>1）查询与范君召同职称的教师姓名。</p><p>–1.<br>Select tname<br>From teacher<br>Where ttitle=(select ttitle  –定位ttitle<br>From teacher<br>Where tname=’范君召’)–查询范昭君的职称</p><p>2）查询张进”JAVA程序设计”的成绩。</p><p>–2.<br>select grade 张进JAVA程序设计的成绩<br>from student left join choice<br>on student.sno=choice.sno left join course<br>on choice.cno=course.cno<br>where sname=’张进’ and cname=’JAVA程序设计’</p><p>3）查询计算机工程系的所有班级名称。</p><p>–3.<br>select classname 计算机工程系的所有班级名称<br>from class left join professional<br>on class.pno=professional.pno left join department<br>on professional.deptno=department.deptno<br>where deptname=’计算机工程系’</p><p>4）查询比’艺术设计基础’,’微机原理’学分都高的课程。</p><p>–4.<br>select cname<br>from course<br>where Credits&gt;(select max(Credits)<br>from course<br>where cname=’微机原理’ or cname=’艺术设计基础’)</p><p>5）查询比张进,孙晓年龄都大的学生的姓名。</p><p>–5.<br>select sname 比张进孙晓年龄都大的学生的姓名<br>from student<br>where sbirthday&lt;(select min(sbirthday)  –注意不能用年份比较年龄,防止同年生比较<br>from student<br>where sname=’张进’ or sname=’孙晓’)</p><p>6）查询计算机工程系与外语系的所有学生。</p><p>–6.<br>select *from student<br>join class<br>on student.classno=class.classno<br>join professional<br>on class.pno=professional.pno<br>join department<br>on professional.deptno=department.deptno –联结表格<br>where deptname=’计算机工程系’ or deptname=’外语系’–筛选条件</p><p>7）查询’ JAVA程序设计’的最高成绩。</p><p>–7.<br>select max(grade) 最高成绩<br>from choice join course<br>on choice.cno=course.cno<br>where cname=’JAVA程序设计’</p><p>8）将孙晓的所有不及格的成绩改为60分。</p><p>–8.<br>update choice  –选择要修改的表<br>set grade=’60’  –输入修改后的是什么<br>where sno=(select sno<br>from student<br>where sname=’孙晓’) –定位要修改的行<br>and grade&lt;60  —完整补充条件</p><p>9）删除孙晓的不及格的成绩信息。</p><p>–9.<br>delete choice  –选择要删除的表<br>where sno=(select sno<br>from student<br>where sname=’孙晓’) –定位这张表要删除的行<br>and grade&lt;60    –完整补充条件</p><p>10）删除所有没上课的教师。</p><p>–10.<br>delete teacher–选择要删除的表<br>where teacher.tno=(select teacher.tno<br>from teacher left join teaching<br>on teaching.tno=teacher.tno<br>where cno is null)–定位这张表要删除的行</p><p>11）删除外语系的所有老师信息。</p><p>–11.<br>delete teacher<br>where tno in (select tno from teaching<br>where cno in (select cno from course<br>where cno in (select cno from choice<br>where sno in (select sno from student<br>where classno in (select classno from class<br>where pno in (select pno from professional<br>where deptno in (select deptno from department<br>where deptname=’外语系’)))))))   –多多重重嵌套</p><p>12）查询所有学生与老师的性名与性别,将结果合并为一个。</p><p>–12.<br>select tname 姓名,tsex 性别<br>from teacher<br>union<br>select sname 姓名,ssex 性别<br>from student       –使用union注意：1.所有查询中的列数和列的顺序必须相同 2.数据类型必须兼容啊</p><p>13）查询所有没有教授” JAVA程序设计”的教师姓名。</p><p>–13.<br>select *from teacher<br>where teacher.tno &lt;&gt; (select tno   –   &lt;&gt;  表示不等于<br>from teaching join course<br>on teaching.cno=course.cno<br>where cname=’JAVA程序设计’)  –筛选“JAVA程序设计”课程对应的所有教师编号</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;/images/insert_image2.jpg&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>已识乾坤大，犹怜草木青。</title>
     <link href="https://lavandola.github.io/2019/06/14/%E5%B7%B2%E8%AF%86%E4%B9%BE%E5%9D%A4%E5%A4%A7%EF%BC%8C%E7%8A%B9%E6%80%9C%E8%8D%89%E6%9C%A8%E9%9D%92%E3%80%82/"/>
     <id>https://lavandola.github.io/2019/06/14/已识乾坤大，犹怜草木青。/</id>
