@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lavandola.github.io/"/>
-  <updated>2019-08-25T08:58:38.676Z</updated>
+  <updated>2019-08-29T18:51:47.368Z</updated>
   <id>https://lavandola.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://lavandola.github.io/2019/09/09/%E5%88%9D%E7%BA%A7%E4%BC%9A%E8%AE%A1%E5%AE%9E%E8%AE%AD/"/>
+    <id>https://lavandola.github.io/2019/09/09/初级会计实训/</id>
+    <published>2019-09-08T19:44:30.049Z</published>
+    <updated>2019-08-29T18:51:47.368Z</updated>
+    
+    <content type="html"><![CDATA[<p>@<a href="目录">TOC</a></p><h1 id="初级会计实务实训"><a href="#初级会计实务实训" class="headerlink" title="初级会计实务实训"></a>初级会计实务实训</h1><h2 id="基本流程图"><a href="#基本流程图" class="headerlink" title="基本流程图"></a>基本流程图</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">A[原始凭证] -- 1 --&gt; E[汇总原始凭证]</span><br><span class="line">A[原始凭证] -- 2 --&gt; C(收款,付款,转账,记账凭证)</span><br><span class="line">B[科目汇总表]</span><br><span class="line">C -- 3 --&gt; D[现金,银行存款日记账]</span><br><span class="line">B -- 6 --&gt; H[总分类账]</span><br><span class="line">E -- 2--&gt; C(收款,付款,转账,记账凭证)</span><br><span class="line">E -- 4 --&gt; F[明细分类账]</span><br><span class="line">H -- 8 --&gt; G[会计报表]</span><br><span class="line">C -- 5 --&gt; B[科目汇总表]</span><br><span class="line">E[汇总原始凭证]</span><br><span class="line">F[明细分类账]</span><br><span class="line">G[会计报表]</span><br><span class="line">H[总分类账]</span><br><span class="line">H -- 7 --&gt; F</span><br><span class="line">F -- 8 --&gt; G</span><br><span class="line">F -- 7 --&gt; H</span><br><span class="line">C -- 4 --&gt; F</span><br></pre></td></tr></table></figure><h2 id="简化流程"><a href="#简化流程" class="headerlink" title="简化流程"></a>简化流程</h2><p>1.填写凭证<br>2.粘贴原始凭证<br>3.等级所有种类的明细账和所有种类的日记账<br>4.制作T形账户<br>5.编录科目汇总表<br>6.编录总账</p><h1 id="具体流程注意事项"><a href="#具体流程注意事项" class="headerlink" title="具体流程注意事项"></a>具体流程注意事项</h1><h2 id="1-填写凭证"><a href="#1-填写凭证" class="headerlink" title="1.填写凭证"></a>1.填写凭证</h2><p>   根据原始凭证首先做<strong>会计分录</strong>，注意会计分录的摘要一般可以在原始凭证上找到业务类型，然后根据业务类型进行分录，注意==一级科目==和==二级科目==要尽量写好，并根据业务类型判断一级和二级科目，借贷平衡。<br>   在做好会计分录的基础上填写会计凭证，依次填写好：<br>   1.时间<br>   2.摘要<br>   3.制单人员名字<br>   4.在右上角填写==记==字第==001==号，如果一笔业务一张凭证写不完可以写==记字第<del>1/2</del>001==和==记字记字第<del>2/2</del>001==<br>   5.根据会计分录填写==科目(总账科目/明细科目)i==和==借贷方金额==和==合计(注意合计数字前加¥)==<br>   6.在借方金额和贷方金额下面没有数据的用斜/标记，防止篡改<br>   ==注意：入库和领用材料不需要会计分录，但需要登记明细账==</p><h2 id="2-粘贴原始凭证"><a href="#2-粘贴原始凭证" class="headerlink" title="2.粘贴原始凭证"></a>2.粘贴原始凭证</h2><p>依次把原始凭证粘贴在记账凭证后<del>并在==会计主管==写上粘贴人的名字</del><br>==注意：入库和领用材料不需要会计分录，但需要登记明细账并在月末用一次加权平均法计量==</p><h2 id="3-登记所有种类的明细账和所有种类的日记账"><a href="#3-登记所有种类的明细账和所有种类的日记账" class="headerlink" title="3.登记所有种类的明细账和所有种类的日记账"></a>3.登记所有种类的明细账和所有种类的日记账</h2><p>根据记账凭证填写账簿<br>账簿初始化：<br>1.填写账簿启用表，填写单位名称，账簿名称，启用日期，经管人员，单位盖章等<br>2.首次启用需要记录期初余额</p><h2 id="4-制作T形账户"><a href="#4-制作T形账户" class="headerlink" title="4.制作T形账户"></a>4.制作T形账户</h2><p>只需根据凭证填写电子表格即可</p><p>实例：<br>总账科目     | 二级科目     | 借方金额     | 贷方金额   | 记账凭证号<br>——– | —– | —– | —–     |  ——–<br>固定资产  | 机械设备类  | ¥120,000  | ¥0       |  001<br>应交税费 | 应交增值税(进项税)  | ¥19,200  | ¥0<br>银行存款  | /  |¥0  | ¥139,200</p><h2 id="5-编录科目汇总表"><a href="#5-编录科目汇总表" class="headerlink" title="5.编录科目汇总表"></a>5.编录科目汇总表</h2><p>选中T型账户，直接插入数据透视表即可，也可以利用COUNTIF函数进行求值</p><h2 id="6-编录总账"><a href="#6-编录总账" class="headerlink" title="6.编录总账"></a>6.编录总账</h2><p>根据T型账户进行总账的编录，只需记录一级科目即可，注意借贷方向，借增加，贷减少，余数是正就写借，是负就写贷。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;@&lt;a href=&quot;目录&quot;&gt;TOC&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;初级会计实务实训&quot;&gt;&lt;a href=&quot;#初级会计实务实训&quot; class=&quot;headerlink&quot; title=&quot;初级会计实务实训&quot;&gt;&lt;/a&gt;初级会计实务实训&lt;/h1&gt;&lt;h2 id=&quot;基本流程图&quot;&gt;&lt;a hr
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Hexo添加网页访问计数功能</title>
